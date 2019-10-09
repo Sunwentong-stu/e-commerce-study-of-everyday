@@ -1,0 +1,38 @@
+前端开发工具介绍
+      Hbuilder可以快速生成HTML标准文档结构，集成了很多方便的快捷键。
+-------------------------------------------------------
+HTML的head标签学习
+<html>
+      <head>
+               <!--head标签中主要配置浏览器的配置信息-->
+            <title>html study</html>
+<!--网页标题标签：告诉浏览器使用什么标题显示网页- ->
+<!- -
+     了解：
+          关键字
+          网页描述
+          作者
+     作用：提升网页在浏览器中的搜索概率。
+- ->
+<meta name=”keywords” content=”HTML，SXT，张老师，506”
+  <!- -网页关键字- ->
+<meta name=”description” content=”本网页是**********，good”/>
+  <!- -网页描述- ->
+<meta name=”author” content=”张老师”/>
+  <!- -网页作者- ->
+<meta http-equiv=”refresh” content=”5”;url=http://www.baidu.com”/>
+  <!- -网页自动调整- ->
+      </head>
+      <body>
+            This is my first html.
+      </body>
+</html>
+
+
+乱码：你保存数据的模式和你打开数据的模式不一样
+  eg:将title标签中的内容换为   HTML学习   会出现乱码现象
+   解决方法：可用title标签下一行写
+              <meta charset=”utf-8”/>
+       <!- -HTML5网络解析编码格式配置；告诉浏览器使用指定的编码格式输出数据- ->
+        或者<meta http-equiv=”content-type”content=”text/html;charset=utf-8”/>
+       <!- -html4;文档编码格式设置- ->

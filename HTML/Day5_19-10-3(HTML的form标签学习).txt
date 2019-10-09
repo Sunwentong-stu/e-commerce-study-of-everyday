@@ -1,0 +1,99 @@
+<html>
+    <head>
+		<title>form标签学习</title>
+		<meta charset="utf-8"/>
+	</head>	
+    <body>
+		<!--
+		    form表单标签学习：
+			    作用：收集并提交用户数据给指定服务器
+				注意：form标签会收集其标签内部的数据
+				属性：
+				    action：收集的数据提交地址，也就是URL
+					method：收集的数据的提交方式
+					    get：适合小量数据，表单数据以？隔开拼接在URL后面，不同的键值对使用&符号隔开，不安全。
+						post：适合大量数据，安全
+					注意：
+					    表单数据的提交，要提交的表单项必须具有name属性值，否则不会提交
+						提交的表单数据项为键值对，键为name属性的值，值为用户书写的数据
+						form表单的数据提交需要依赖于submit提交按钮
+			form表单域标签学习：
+			    作用：给用户提供可以进行数据书写或者选择的标签
+				使用：
+				    文本框：
+					    input：
+						    type：
+							    text：收集少量的文本数据，用户可见
+								password：收集用户密码数据，用户不可见
+							name：数据提交的键，也会被JS使用
+							value：默认值
+					单选框：
+					    input：
+						     type：
+							    radio
+							name：name属性值相同的单选框只能选择一项数据
+							value:要提交的数据
+							checked：checked 使用此属性的单选默认是选择状态
+						注意：表单数据提交的是表单域标签的value值
+					多选框：
+					    input：
+						    type：
+							    checkbox
+							name:一个多选组需要使用相同的name属性值
+							value：要提交的数据
+							checked：checked 使用此属性的多选框默认选择状态
+					单选下拉框：
+					    select
+						    name:数据提交的键名，必须声明
+							子标签option：一个option标签标示一个下拉选项
+						            value：要提交的数据
+									selected：selected 使用此属性的下拉框默认选择状态
+					文本域：
+					    textarea:声明一个可以书写大量文本的文本区域
+						    name：数据提交的键名，JS和CSS也会使用
+							rows：声明文本的行数
+							cols：声明文本的列数
+					普通按钮:
+						    input：
+							    type：
+								    button
+								value：
+					隐藏标签：
+					        input：
+							    type：
+								    hidden
+								name：
+								value：
+					    
+				
+			form表单标签的使用：
+			    form标签会在点击数据提交时，form标签会将内部所有form表单域标签中用户书写的数据按照method指明的提交方式提交给action属性所指明的提交地址。
+		-->
+		<h3>form标签学习</h3>
+		<hr />
+		    <form action="#" method="get">
+				用户名：<input type="text" name="uname" value="王五"/><br />
+				密码：<input type="password" name="upwd"/><br />
+				单选框：性别：男<input type="radio" name="sex" value="1"/>女<input type="radio" name="sex" value="0"/><br />
+				爱好：<br/>
+				    吃饭<input type="checkbox" name="fav" value="1"/><br />
+				    睡觉<input type="checkbox" name="fav" value="2"/><br />
+					打豆豆<input type="checkbox" name="fav" value="3"/><br />
+				籍贯：<br />
+				<select name="address">
+					<option value="0">--请选择--</option>
+					<option value="1">北京</option>
+					<option value="2">天津</option>
+					<option value="3" selected="selected">大连</option>
+				</select>
+				    <br />
+				文本域：<br />
+					    <textarea name="intro" rows="10" cols="30"></textarea><br />
+				普通按钮：<br />
+				    <input type="button" id="" value="普通按钮" />
+				隐藏标签：
+				    <input  type="hidden" name="hidden" id="" value="哈哈哈哈哈哈"/>
+				<input type="submit" value="登录"/>
+			</form>
+	</body>
+</html>

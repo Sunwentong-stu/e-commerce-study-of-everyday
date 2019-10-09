@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<title>css的定位学习</title>
+		<meta charset="utf-8" />
+		<!--
+		    css的定位学习：
+			position
+			    相对定位：relative（小幅移动）
+				    作用：相对于元素原本的位置移动指定的距离
+					    可以使用left、right、top、bottom来进行设置
+					注意：
+					    其他元素的位置是不会改变的
+				绝对定位：absolute（大幅度移动）
+				    作用：可以使元素参照界面或者相对父元素来进行移动
+					注意：
+					    如果父级元素要成为参照元素，必须使用相对定位属性
+						默认情况下是以界面为基准进行移动的
+				固定定位：fixed
+				    作用：将元素固定显示在页面的指定位置，不会随着滚动条的移动而改变位置
+				以上定位都可以使用top，left，right，bottom来进行移动
+				z-index:
+				    作用：声明元素的显示级别的
+		-->
+		<!--声明css代码域-->
+		<style type="text/css">
+			/*给div01添加样式*/
+			#div01{
+				border:solid 2px orange;
+				height:300px;
+				width:800px;
+				margin-bottom:10px;
+				position: relative;/*给div01添加相对定位，使其成为其子元素的绝对定位的参照元素*/
+			}
+			/*给showdiv添加样式*/
+			#showdiv{
+				border:solid 3px;
+				height:50px;
+				width: 50px;
+				position: absolute;
+				top:10px;
+			}
+			/*给div02添加样式*/
+			#div02{
+				border:dashed 2px coral;
+				height:300px;
+				width:800px;
+				position: relative;/*使用相对定位,相对于原本的位置走*/
+				left:50px;
+				top:100px;
+				background-color: coral;
+				z-index: 1;
+			}
+			/*给div03添加样式*/
+			#div03{
+				border:solid 2px #FF7F50;
+				height:300px;
+				width:800px;
+				position: relative;
+				background-color: gray;
+				z-index: 2;
+			}
+			#div04{
+				border:solid 3px blue;
+				height:50px;
+				width: 50px;
+				position: fixed;
+				top: 270px;
+				right:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div01">
+			<div id="showdiv">
+				
+			</div>
+		</div>
+		<div id="div02">我是div02</div>
+		<div id="div03"></div>
+		<div id="div04"></div>
+	</body>
+</html>
