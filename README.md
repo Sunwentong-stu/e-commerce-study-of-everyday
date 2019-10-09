@@ -1,0 +1,1 @@
+# e-commerce-study-of-everyday
