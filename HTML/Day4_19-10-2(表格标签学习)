@@ -1,0 +1,92 @@
+<html>
+    <head>
+	    <title>表格标签学习</title>
+		<meta charset="utf-8"/>
+		<!--
+		    表格标签学习：
+			    table：声明一个表格
+				    tr：声明一行,设置行高及所有单元格的高度
+					    th：声明一个单元格，表头格，默认居中加黑显示。
+					    td：声明一个单元格。默认居左显示原始数据
+					注意：
+					    行高及所有单元格的宽度
+						单元格的宽度及列宽
+					    
+						
+			    属性：
+				    border：给表格添加边框
+					width：设置表格的宽度
+					height：设置表格的高度
+					cellpadding：设置内容距边框的距离
+					cellspacing：设置边框的大小
+			    特点：
+				    默认根据表格的数据大小进行数据显示
+			单元格的合并：
+			    第一步：
+				    首先确定是一个完整的单元格
+				第二步：
+				    根据要合并的单元格，找到其所在的源码位置
+				第三步：
+				    行合并：在要合并的单元格中的第一个单元格使用属性rowspan="要合并单元格的个数"，并删除其他要合并单元格
+					列合并：在要合并的单元格中的任意一个上使用属性colspan="要合并单元格的个数"，并删除其他要合并的单元格
+		-->
+	</head>
+	<body>
+	    <h3>表格标签学习</h3>
+		<hr />
+		<h4>表格标签的常用属性及设置学习</h4>
+		<table border="1px" cellpadding="10px" cellspacing="10px">
+		    <tr height="50px">
+			    <td>科目</td>
+				<td>分数</td>
+				<td>说明</td>
+				<td>级别</td>
+			</tr>
+			<tr>
+			    <td>Java</td>
+				<td>100</td>
+				<td>面向对象语音</td>
+				<td>8</td>
+			</tr>
+			<tr>
+			    <td>C语言</td>
+			    <td>100</td>
+			    <td>面向过程的语言</td>
+			    <td>8</td>
+			</tr>
+		</table>
+		<hr />
+		<h4>单元格的合并学习</h4>
+		<!--
+		    table>tr*4>td*5
+			这是hbuilder的快捷操作
+			单元格的合并只能是两两之间慢慢和
+		-->
+		    <tr height="35px">
+		        <td width="100px"></td>
+			    <td width="100px"></td>
+			    <td width="100px"></td>
+			    <td width="100px"></td>
+			    <td width="100px"></td>
+		    </tr>
+		    <tr height="35px">
+		        <td colspan="2"></td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+		    </tr>
+		    <tr height="35px">
+		        <td></td>
+			    <td></td>
+			    <td></td>
+			    <td rowspan="2"></td>
+			    <td></td>
+		    </tr>
+		    <tr height="35px">
+		        <td></td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+		    </tr>
+	</body>
+</html>
